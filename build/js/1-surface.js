@@ -52,7 +52,7 @@ Surface.prototype.draw = function (context) {
     context.beginPath();
     context.fillStyle = this.points[i].color;
     context.fillRect(this.points[i][X] * this.surfaceScale,
-      this.points[i][Y] * this.surfaceScale, 7, 7);
+      this.points[i][Y] * this.surfaceScale, 6, 6);
     context.closePath();
   }
 }

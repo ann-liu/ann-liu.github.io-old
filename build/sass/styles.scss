@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300');
-
 $background-color: #060606;
+
+$font-family: 'Roboto', sans-serif;
 
 $screen-sm-min: 576px;
 $screen-md-min: 768px;
@@ -34,8 +34,7 @@ $screen-lg-min: 992px;
 html, body {
   overflow: hidden;
   background-color: $background-color;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-family: $font-family;
 }
 
 #canvas {
