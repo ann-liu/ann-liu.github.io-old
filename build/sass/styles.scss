@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+$background-color: #060606;
+
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+
+@mixin xs {
+  @media (max-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) and (max-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+
+
+html, body {
+  overflow: hidden;
+  background-color: $background-color;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+#canvas {
+  position: absolute;
+  z-index: 100;
+}
+
+#made_with_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  z-index: 200;
+  @include xs {
+    bottom: 1.3em;
+    right: 1.2em;
+  }
+  @include sm {
+    bottom: 1.7em;
+    right: 2.7em;
+  }
+  @include md {
+    bottom: 1.7em;
+    right: 2em;
+  }
+  @include lg {
+    bottom: 2em;
+    right: 2.5em;
+  }
+}
+
+#made_with {
+  visibility: hidden;
+  align-items: center;
+  color:#fff;
+  z-index: 200;
+  @include xs {
+    span {
+      font-size: 1em;
+    }
+    img {
+      height: 22px;
+    }
+  }
+  @include sm {
+    span {
+      font-size: 1.8em;
+      margin-right: 10px;
+    }
+    img {
+      height: 40px;
+    }
+  }
+  @include md {
+    span {
+      font-size: 1.8em;
+    }
+    img {
+      height: 38px;
+      margin-left: 8px;
+    }
+  }
+  @include lg {
+    span {
+      font-size: 1.5em;
+    }
+    img {
+      height: 38px;
+      margin-left: 8px;
+    }
+  }
+}
+
+#info {
+  display: block;
+  @include xs {
+    margin-left: 10px;
+    height: 34px;
+  }
+  @include sm {
+    height: 40px;
+    margin-left: 16px;
+  }
+  @include md {
+    height: 36px;
+    margin-left: 20px;
+  }
+  @include lg {
+    height: 36px;
+    margin-left: 20px;
+  }
+}
+
+div.header {
+  position: absolute;
+  z-index: 200;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+  @include xs {
+    top: 0.5em;
+    left: 0.7em;
+    font-size: 3em;
+    img {
+      height: 32px;
+    }
+  }
+  @include sm {
+    top: 0.6em;
+    left: 0.8em;
+    font-size: 4em;
+    img {
+      height: 40px;
+    }
+  }
+  @include md {
+    top: 0.8em;
+    left: 0.9em;
+    font-size: 3.6em;
+    img {
+      height: 36px;
+    }
+  }
+  @include lg {
+    top: 0.8em;
+    left: 1em;
+    font-size: 3.4em;
+    img {
+      height: 36px;
+    }
+  }
+}
+
+#header-text{
+  color:#fff;
+}
+
+#email {
+  display: none;
+  margin-right: 16px;
+}
