@@ -11,9 +11,6 @@ var screen_pt = new Point(0, 0);
 var offset_x = 0;
 var offset_y = 0;
 
-var is_mobile = /Mobi/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent);
-var mobile_click = false;
-
 var WIDTH = window.innerWidth;
 var HEIGHT = window.innerHeight;
 
@@ -195,23 +192,9 @@ $(document).ready(function() {
   }, function() {
     $('#made_with').css('visibility','hidden');
   });
-
-  $('div.header').hover(function() {
-    $('#email').css('display','inline-block');
-  }, function() {
-    $('#email').css('display','none');
-  });
-
-  $('div.header').click(function(e) {
-    if (is_mobile) {
-      if (mobile_click) {
-        window.location.href = "mailto:annliu03@gmail.com";
-      } else {
-        mobile_click = true;
-      }
-    } else {
-      window.location.href = "mailto:annliu03@gmail.com";
-    }
+  
+  $('#email').click(function(e) {
+    window.location.href = "mailto:annliu03@gmail.com";
   });
 })
 
