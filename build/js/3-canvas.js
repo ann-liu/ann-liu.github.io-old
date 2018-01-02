@@ -29,8 +29,6 @@ var surface = new Surface(WIDTH, HEIGHT);
 surface.generate();
 surface.init_matrices();
 
-var direction = true;
-
 var timer;
 var intervals = [];
 
@@ -53,7 +51,7 @@ var init_surface = () => {
   canvas_to_screen.setTransform([1, 0, 0, 1, 0, 0]);
 
   translate(WIDTH / 2, HEIGHT / 2);
-  scale(new Point(0,0), 0.3);
+  scale(new Point(0,0), 0.25);
   draw();
 };
 

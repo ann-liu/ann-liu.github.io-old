@@ -41,7 +41,7 @@ Surface.prototype.generate = function () {
   for (var x = this.xMin; x <= this.xMax; x += this.xDelta) {
     for (var y = this.yMin; y <= this.yMax; y += this.yDelta) {
       this.points[i] = this.point(x, y, this.equation(x, y));
-      this.points[i].color = '#ffffff'
+      this.points[i].color = '#fff'
       ++i;
     }
   }
@@ -131,7 +131,7 @@ Surface.prototype.set_random_color = function () {
 
 Surface.prototype.reset_color = function () {
   for (var i = 0; i < this.points.length; i++) {
-    this.points[i].color = '#ffffff';
+    this.points[i].color = '#fff';
   }
 }
 
@@ -143,7 +143,7 @@ Surface.prototype.closest_pts = function (pt) {
       if (dist <= 400) {
         this.points[i].color = this.random_color();
       } else {
-        this.points[i].color = '#ffffff';
+        this.points[i].color = '#fff';
       }
     }
   }
