@@ -138,15 +138,14 @@ draw = function () {
   clear(buffercontext);
   clear(context);
 
-  buffercontext.save();
-
+  //buffercontext.save();
   canvas_to_screen.applyTransform(buffercontext);
 
   for (var i = 0; i < drawables.length; i++) {
     drawables[i].draw(buffercontext);
   }
 
-  buffercontext.restore();
+  //buffercontext.restore();
   context.drawImage(buffer, 0, 0);
 }
 
