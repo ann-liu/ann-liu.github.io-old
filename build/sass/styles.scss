@@ -166,11 +166,12 @@ div.header {
       display: none;
     }
     img {
-      height: 12px;
+      height: 14px;
     }
     div.content-break {
       span {
-        padding-right: 2px;
+        font-size: 1.3em;
+        padding-right: 5px;
       }
     }
   }
@@ -178,17 +179,17 @@ div.header {
     flex-direction: column;
     top: 1.6em;
     left: 2em;
-    line-height: 1;
+    line-height: 1.1;
     div.break {
       display: none;
     }
     img {
-      height: 14px;
+      height: 16px;
     }
     div.content-break {
       span {
-        font-size: 1.4em;
-        padding-right: 5px;
+        font-size: 1.7em;
+        padding-right: 8px;
       }
     }
   }
