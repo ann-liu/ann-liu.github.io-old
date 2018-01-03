@@ -184,11 +184,11 @@ div.header {
       display: none;
     }
     img {
-      height: 16px;
+      height: 20px;
     }
     div.content-break {
       span {
-        font-size: 1.7em;
+        font-size: 1.8em;
         padding-right: 8px;
       }
     }
@@ -298,6 +298,10 @@ div.header {
     cursor: pointer;
   }
   @include xs {
+    top: 1px;
+    margin-left:1px;
+  }
+  @include sm {
     top: 1px;
     margin-left:1px;
   }
