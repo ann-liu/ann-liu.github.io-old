@@ -16,6 +16,7 @@ function Surface(w, h) {
   this.yDelta = 1;
   this.surfaceScale = 24;
   this.dTheta = 0.05;
+  this.defaultColor = '#D0D0D0';
   this.Rx = [[0, 0, 0],
   [0, 0, 0],
   [0, 0, 0]];
@@ -41,7 +42,7 @@ Surface.prototype.generate = function () {
   for (var x = this.xMin; x <= this.xMax; x += this.xDelta) {
     for (var y = this.yMin; y <= this.yMax; y += this.yDelta) {
       this.points[i] = this.point(x, y, this.equation(x, y));
-      this.points[i].color = '#fff'
+      this.points[i].color = this.defaultColor
       ++i;
     }
   }
@@ -131,7 +132,7 @@ Surface.prototype.set_random_color = function () {
 
 Surface.prototype.reset_color = function () {
   for (var i = 0; i < this.points.length; i++) {
-    this.points[i].color = '#fff';
+    this.points[i].color = this.defaultColor;
   }
 }
 
@@ -143,7 +144,7 @@ Surface.prototype.closest_pts = function (pt) {
       if (dist <= 400) {
         this.points[i].color = this.random_color();
       } else {
-        this.points[i].color = '#fff';
+        this.points[i].color = this.defaultColor;
       }
     }
   }
