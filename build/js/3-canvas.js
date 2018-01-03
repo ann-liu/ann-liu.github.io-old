@@ -184,7 +184,7 @@ function animate() {
 }
 
 $(document).ready(function() {
-  $('#info').hover(function() {
+  $('#code').hover(function() {
     $('#made_with').css('visibility','visible');
   }, function() {
     $('#made_with').css('visibility','hidden');
