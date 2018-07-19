@@ -1,8 +1,8 @@
 "use strict";
 var precacheConfig = [
-        ["./index.html", "a9928fc845f0b83258482dba598c062b"],
-        ["./service-worker.js", "f69815476994289a8a632197c17c5129"],
-        ["./static/css/app.28c041f6776123f2959d83cb1e8f0ac4.css", "2bbb960e3e1d59693a0b55b71e312c4a"],
+        ["./index.html", "7c1508793d65ffcbba7324e8ae13e22f"],
+        ["./service-worker.js", "94653abd2698a4a89aa5d648111186e3"],
+        ["./static/css/app.7e71d78a2887e832d928442287855f13.css", "5dc884c5ab845ff157db990b851794f4"],
         ["./static/img/dl.png", "983e810661b891da22015cac7179050a"],
         ["./static/img/icons/android-chrome-192x192.png", "11931eb9dcd471aafa5954267eb71af6"],
         ["./static/img/icons/android-chrome-512x512.png", "dad65bafec053503d5736676b05b9eaf"],
@@ -11,7 +11,7 @@ var precacheConfig = [
         ["./static/img/icons/favicon-32x32.png", "6a88937ab5f6b637ab5a13cfcbf0a28d"],
         ["./static/img/icons/mstile-150x150.png", "01f82f48fb89c3763576032d24c8e9c0"],
         ["./static/img/restart.png", "56c0b270e3513c5fd82be4c846b56879"],
-        ["./static/js/app.44b003b851c46077808a.js", "c6cc57038e880d18f81f40fb3116512b"],
+        ["./static/js/app.97edbf77f0484931068c.js", "d5f2b6ad822eae3b471bde2f080848ec"],
         ["./static/js/manifest.2ae2e69a05c33dfc65f8.js", "40dcfff9d09d402daf38b8a86518deeb"],
         ["./static/js/vendor.13642c0ae45a429ed0bd.js", "f63ee0da0791cfdd5159866190ea26cd"]
     ],
@@ -105,7 +105,7 @@ self.addEventListener("install", function(e) {
 }), self.addEventListener("fetch", function(e) {
     if ("GET" === e.request.method) {
         var t, n = stripIgnoredUrlParameters(e.request.url, ignoreUrlParametersMatching);
-        (t = urlsToCacheKeys.has(n)) || (n = addDirectoryIndex(n, "./index.html"), t = urlsToCacheKeys.has(n));
+        (t = urlsToCacheKeys.has(n)) || (n = addDirectoryIndex(n, "index.html"), t = urlsToCacheKeys.has(n));
         0, t && e.respondWith(caches.open(cacheName).then(function(e) {
             return e.match(urlsToCacheKeys.get(n)).then(function(e) {
                 if (e) return e;

@@ -1,6 +1,6 @@
 {
-  "name": "Wallpapers",
-  "short_name": "Wallpapers",
+  "name": "wallpaper-pwa",
+  "short_name": "wallpaper-pwa",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
@@ -16,5 +16,5 @@
   "start_url": "../index.html",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#f3d554"
+  "theme_color": "#34495e"
 }
