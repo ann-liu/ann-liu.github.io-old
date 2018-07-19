@@ -16,7 +16,7 @@ function Surface(w, h) {
   this.yDelta = 1;
   this.surfaceScale = 24;
   this.dTheta = 0.05;
-  this.defaultColor = '#D0D0D0';
+  this.defaultColor = '#2d3436';
   this.Rx = [[0, 0, 0],
   [0, 0, 0],
   [0, 0, 0]];
